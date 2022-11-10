@@ -12,13 +12,35 @@ body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 </style>
 <script src="https://kit.fontawesome.com/b96226fb6e.js" crossorigin="anonymous"></script>
-<link rel="chart" href="assets/js/chart.js">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Watermill',     6],
+          ['Solar cells',      4],
+          ['Terra pump',  3],
+          ['Tree sap',    2]
+        ]);
+
+        var options = {
+          title: 'Daily production'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 <body>
 
 <!-- Navbar -->
 <div class="w3-top w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
 </div>
 
@@ -28,31 +50,33 @@ body {font-family: "Lato", sans-serif}
       
   <!-- Automatic Slideshow Images-->
   <div class="mySlides w3-display-container w3-center">
-    <img src="assets/images/Lilla Burms.png" style="width:100%">
+    <img src="assets/images/20221110_094655992_iOS.png" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Los Angeles</h3>
-      <p><b>We had the best time playing at Venice Beach!</b></p>   
+      <h3>Our houses</h3>
+      <p><b>The self-sustainable answer</b></p>   
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center">
-    <img src="assets/images/alexandru-trandafir-XsZwoxL_HNM-unsplash.jpg" style="width:100%">
+    <img src="assets/images/Skov.png" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>New York</h3>
-      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
+      <h3>Where we build?</h3>
+      <p><b>Be one with the beautiful nature</b></p>    
     </div>
   </div>
 
   <!-- The Band Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide">THE BAND</h2>
-    <p class="w3-opacity"><i>We love music</i></p>
-    <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <h2 class="w3-wide">About the initiative</h2>
+    <p class="w3-opacity"><i>Who are we?</i></p>
+    <p class="w3-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in nisl sed metus laoreet accumsan eu sed purus. Pellentesque eu vestibulum nunc, a sollicitudin elit. Suspendisse mollis sem eu magna ultrices mollis. Cras pulvinar nibh eu orci rutrum porta. Nulla aliquam ullamcorper malesuada. Ut aliquam interdum elit, non lobortis neque tristique at. Phasellus vel dolor dictum, cursus velit facilisis, faucibus mi. Vivamus magna neque, hendrerit sit amet lectus vel, finibus dictum odio. Phasellus sodales odio id felis porta, sit amet molestie ante euismod. Vivamus eu ligula id erat viverra sagittis. Aenean dapibus ex in erat viverra aliquam.
+
+      Nam semper egestas orci et congue. Vestibulum lobortis orci quis magna malesuada eleifend. Cras dapibus augue in tellus placerat volutpat. Maecenas et urna tempor ante tempor malesuada ut sit amet metus. Maecenas euismod consequat nunc. Donec id purus arcu. Maecenas ac enim a diam viverra bibendum.</p>
+    <p class="w3-justify">Duis feugiat est lacinia tellus varius, et aliquam ante congue. Suspendisse vel magna eget lorem bibendum eleifend. Phasellus lacus ex, dignissim sit amet lobortis a, tincidunt sed eros. Maecenas convallis turpis vel libero luctus tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent a magna magna. Proin venenatis porta mi, at facilisis ligula elementum ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique eros in tellus gravida rhoncus. Vestibulum eu est sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu suscipit tortor. Vivamus id sodales massa. Fusce viverra pharetra arcu non euismod. Morbi lorem libero, molestie at lacinia vel, fermentum id dolor. Donec erat leo, commodo eu porttitor vel, venenatis sed turpis.
+      
+      Maecenas sapien est, consectetur consectetur pulvinar nec, tempor quis augue. Curabitur rhoncus libero ut rhoncus hendrerit. Aenean ac mattis diam. Phasellus semper, magna elementum ornare euismod, sapien sem viverra nibh, sed dictum nisi neque nec mauris. Integer malesuada, nunc eu congue viverra, magna lorem sagittis eros, quis suscipit elit enim ac ipsum. Etiam hendrerit mauris vel interdum mattis. Donec nec arcu blandit, hendrerit tellus ac, sollicitudin elit. Mauris id porta risus. Fusce ultrices consectetur massa ut imperdiet.</p>
     <div class="w3-row w3-padding-32">
-      <div class="w3-third">
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-       <div id="chart_div" style="width: 400px; height: 120px;"></div>
+      <div class="w3-third w3-center">
+        <div id="piechart" style="width: 900px; height: 500px;"></div>
       </div>
     </div>
   </div>
@@ -62,7 +86,7 @@ body {font-family: "Lato", sans-serif}
     <h2 class="w3-wide w3-center">CONTACT</h2>
     <div class="w3-row w3-padding-32">
       <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
+        <i class="fa fa-map-marker" style="width:30px"></i> Nature, brother<br>
         <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
         <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
       </div>
@@ -82,12 +106,10 @@ body {font-family: "Lato", sans-serif}
       </div>
     </div>
   </div>
-  
-<!-- End Page Content -->
 </div>
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+<!-- End Page Content -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge" style="width: 3px space around">
   <i class="fa fa-facebook-official w3-hover-opacity"></i>
   <i class="fa fa-instagram w3-hover-opacity"></i>
   <i class="fa fa-snapchat w3-hover-opacity"></i>
@@ -112,16 +134,6 @@ function carousel() {
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 4000);    
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
 }
 
 // When the user clicks anywhere outside of the modal, close it
